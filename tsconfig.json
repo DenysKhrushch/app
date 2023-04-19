@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,9 +18,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "downlevelIteration": true,
   },
   "include": [
     "src"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/no-shadow": "off"
+  },
+  "exclude": [
+    "plugins",
+    "contracts",
+    "migrations",
+    "truffle-config.js"
+  ],
+  "extends": "./tsconfig.paths.json"
 }
