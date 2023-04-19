@@ -1,6 +1,6 @@
 import { takeLatest } from 'redux-saga/effects';
 import { getTodosSaga } from './getTodosSaga';
-import { TodosActions } from '../reducers/todos';
+import { TodosActions } from '../reducers/todoList';
 import { updateTodosSaga } from './updateTodosSaga';
 import { deleteTodosSaga } from './deleteTodosSaga';
 import { addTodosSaga } from './addTodosSaga';

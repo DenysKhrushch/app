@@ -1,7 +1,7 @@
 import { call, put } from 'redux-saga/effects';
-import { Todo } from '../../types/Todo';
-import { getTodos } from '../../api/todos';
-import { TodosActions } from '../reducers/todos';
+import { getTodos } from '../../api/api';
+import { TodosActions } from '../reducers/todoList';
+import { Todo } from '../../types/todo.types';
 
 export function* getTodosSaga() {
   try {

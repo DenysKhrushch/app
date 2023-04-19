@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Provider } from 'react-redux';
-import configStore from './store';
 
 import Home from './components/Home';
 import Layout from './components/Layout';
+import { store } from './store';
 
-const store = configStore();
-
-export const App = React.memo(() => {
+export const App = memo(() => {
   return (
     <Provider store={store}>
       <Layout>

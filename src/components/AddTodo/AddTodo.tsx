@@ -1,14 +1,8 @@
-import React from 'react';
+import React, { FC, memo } from 'react';
 import { Button, Grid, Paper, TextField } from '@mui/material';
+import { AddTodoProps } from './AddTodo.interface';
 
-interface AddTodoProps {
-  inputValue: string;
-  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onInputKeyPress: (e: React.KeyboardEvent) => void;
-  onButtonClick: () => void;
-}
-
-export const AddTodo: React.FC<AddTodoProps> = React.memo(
+export const AddTodo: FC<AddTodoProps> = memo(
   ({ inputValue, onInputChange, onInputKeyPress, onButtonClick }) => (
     <Paper style={{ margin: 16, padding: 16 }}>
       <Grid container>

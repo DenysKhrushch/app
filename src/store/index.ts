@@ -15,3 +15,5 @@ export default function configStore() {
 
   return store;
 }
+
+export const store = configStore();

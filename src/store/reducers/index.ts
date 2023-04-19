@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import todos from './todos';
+import todoList from './todoList';
 
 const rootReducer = combineReducers({
-  todos,
+  todoList,
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

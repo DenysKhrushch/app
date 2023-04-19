@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 import {
   Checkbox,
   IconButton,
@@ -7,15 +7,9 @@ import {
   ListItemText,
 } from '@mui/material';
 import { DeleteOutlined } from '@mui/icons-material';
+import { TodoListItemProps } from './TodoListItem.interface';
 
-interface TodoListItemProps {
-  divider: boolean;
-  onCheckBoxToggle: () => void;
-  completed: boolean;
-  title: string;
-  onButtonClick?: () => void;
-}
-export const TodoListItem: React.FC<TodoListItemProps> = memo(
+export const TodoListItem: FC<TodoListItemProps> = memo(
   ({ divider, onButtonClick, onCheckBoxToggle, title, completed }) => (
     <ListItem divider={divider}>
       <Checkbox onClick={onCheckBoxToggle} checked={completed} disableRipple />

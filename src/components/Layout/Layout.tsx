@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { FC, memo } from 'react';
 import { AppBar, Link, Paper, Toolbar, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-interface LayoutProps {
-  children: React.ReactNode;
-}
-export const Layout: React.FC<LayoutProps> = React.memo(({ children }) => (
+import { LayoutProps } from './Layout.interface';
+
+export const Layout: FC<LayoutProps> = memo(({ children }) => (
   <Paper
     elevation={0}
     style={{ padding: 0, margin: 0, backgroundColor: '#fafafa' }}

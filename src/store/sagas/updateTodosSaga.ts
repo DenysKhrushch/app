@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
-import { toggleTodo } from '../../api/todos';
-import { TodosActions } from '../reducers/todos';
+import { toggleTodo } from '../../api/api';
+import { TodosActions } from '../reducers/todoList';
 
 export function* updateTodosSaga({
   payload,
@@ -9,8 +9,6 @@ export function* updateTodosSaga({
 }) {
   try {
     yield call(toggleTodo, payload.id, payload.completed);
-
-    yield put(TodosActions.getTodosRequest());
   } catch (error: any) {
     yield put(TodosActions.todosFailure(error.message));
   }
