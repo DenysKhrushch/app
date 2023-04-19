@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Some Additional Information
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I used the following technologies to build this project, cause I wanted to demonstrate my skills in the following areas.
 
 ## Available Scripts
 
